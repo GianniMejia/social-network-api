@@ -1,5 +1,8 @@
 // import "./config/connection.js"; // side-effect
-import { connect, connection, Schema, model } from "./config/connection.js";
+// import { connect, connection, Schema, model } from "./config/connection.js";
+import "./config/connection.js";
+import mongoose from "mongoose";
+const { connect, connection, Schema, model, Types } = mongoose;
 import express, { json, urlencoded } from "express";
 import routes from "./routes/index.js";
 
@@ -17,7 +20,8 @@ app.get("/", async (q, p) => {
   p.send(x);
 });
 
-app.use(routes);
+app.use("/api", routes);
+
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}!`);
 });

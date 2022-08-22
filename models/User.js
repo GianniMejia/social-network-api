@@ -1,10 +1,5 @@
-import {
-  connect,
-  connection,
-  Schema,
-  model,
-  Types,
-} from "../config/connection.js";
+import mongoose from "mongoose";
+const { connect, connection, Schema, model, Types } = mongoose;
 
 const userSchema = new Schema(
   {

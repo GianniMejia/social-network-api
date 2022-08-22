@@ -1,4 +1,5 @@
-import { connect, connection, Schema, model } from "../config/connection.js";
+import mongoose from "mongoose";
+const { connect, connection, Schema, model, Types } = mongoose;
 import { reactionSchema } from "./Reaction.js";
 
 const thoughtSchema = new Schema(
